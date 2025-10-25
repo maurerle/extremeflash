@@ -88,6 +88,16 @@ def bootup_interrupt(ser: serial.Serial):
             ser.write(text)
             break
 
+        # Aruba-AP325
+        if "Hit <Enter> to stop autoboot" in bootlog_buffer:
+            text = b"\r\n"  # send enter key
+            debug_serial(bootlog_buffer)  # print remaining debug buffer
+            logging.info(f"Sending interrupt key {text.decode()} to enter Boot prompt.")
+            time.sleep(0.5)  # sleep 500ms
+            ser.write(text)
+            # TODO FM: should probably be a little earlier
+            break
+
 
 def bootup_login(ser: serial.Serial):
     while event_keep_serial_active.is_set():
