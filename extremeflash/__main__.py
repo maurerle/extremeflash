@@ -6,11 +6,12 @@ import logging
 
 import serial
 
-from .ws import SUPPORTED_MODELS, main
+from .ws import SUPPORTED_MODELS
+from .aruba import main
 
 
 def test_serial_port(potential_serial_port):
-    serial.Serial(port=potential_serial_port, baudrate=115200, timeout=5)
+    serial.Serial(port=potential_serial_port, baudrate=115200, timeout=2)
     return potential_serial_port
 
 

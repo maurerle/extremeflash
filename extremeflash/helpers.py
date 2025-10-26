@@ -205,8 +205,12 @@ def write_to_serial(ser: serial.Serial, text: bytes, sleep: float = 0) -> str:
     ser.write(text)
     if sleep > 0:
         time.sleep(sleep)
-
-    return_string = ser.readline().decode("ascii")
+    line = ser.readline()
+    try:
+        return_string = line.decode("ascii")
+    except Exception:
+        return_string = "Error"
+        logging.exception("Error in: %s", line)
     debug_serial(return_string)
     return return_string
 

@@ -111,7 +111,7 @@ def bootup_set_boot_openwrt(ser: serial.Serial, dryrun: bool = False) -> str:
     time.sleep(1)
     printenv_return = ser.read(ser.in_waiting).decode("ascii")
     debug_serial(printenv_return)
-    model = get_model_name_from_printenv(printenv_return)
+    model = "AP-325"
     boot_openwrt_params = determine_openwrt_boot_params(model)
 
     if "boot_openwrt" in printenv_return:
@@ -173,15 +173,18 @@ def boot_apboot_via_tftp(
     new_ap_ip_str = str(new_ap_ip.ip).encode("ascii")
     new_ap_netmask_str = str(new_ap_ip.netmask).encode("ascii")
     tftp_ip_str = str(tftp_ip.ip).encode("ascii")
+    logging.info("set ip to: %s", new_ap_ip_str)
 
-    write_to_serial(ser, b"setenv ipaddr " + new_ap_ip_str + b"\n")
-    write_to_serial(ser, b"setenv netmask " + new_ap_netmask_str + b"\n")
-    write_to_serial(ser, b"setenv serverip " + tftp_ip_str + b"\n")
-    write_to_serial(ser, b"setenv gatewayip " + tftp_ip_str + b"\n")
+    # does not echo in contrast to ws
+    ser.write(b"setenv autostart n"+ b"\n")
+    ser.write(b"setenv ipaddr " + new_ap_ip_str + b"\n")
+    ser.write(b"setenv netmask " + new_ap_netmask_str + b"\n")
+    ser.write(b"setenv serverip " + tftp_ip_str + b"\n")
+    ser.write(b"setenv gatewayip " + tftp_ip_str + b"\n")
     logging.info("Did setup TFTP Boot.")
-    write_to_serial(ser, b"setenv autostart n"+ b"\n")
+
     write_to_serial(ser, b"netget 44000000 "+ tftp_file.encode("ascii")+ b"\n")
-    
+
     while event_keep_serial_active.is_set():
         line = readline_from_serial(ser)
 
@@ -196,7 +199,7 @@ def boot_apboot_via_tftp(
     write_to_serial(ser, b"nand erase.chip"+ b"\n")
     write_to_serial(ser, b"reset"+ b"\n")
     logging.info("Did patch Bootloader.")
-    
+
     logging.info("Rebooting into patched APBoot")
 
 def boot_factory_via_tftp(
@@ -207,6 +210,7 @@ def boot_factory_via_tftp(
     model: str,
 ):
     assert model == "AP-325"
+
     new_ap_ip_str = str(new_ap_ip.ip).encode("ascii")
     new_ap_netmask_str = str(new_ap_ip.netmask).encode("ascii")
     tftp_ip_str = str(tftp_ip.ip).encode("ascii")
@@ -217,7 +221,7 @@ def boot_factory_via_tftp(
     write_to_serial(ser, b"setenv gatewayip " + tftp_ip_str + b"\n")
     logging.info("Did setup TFTP Boot.")
     write_to_serial(ser, b"tftpboot "+ tftp_file.encode("ascii")+ b"\n")
-    
+
     while event_keep_serial_active.is_set():
         line = readline_from_serial(ser)
 
@@ -267,14 +271,15 @@ def start_tftp_boot_via_serial(
     new_ap_ip: ipaddress.IPv4Interface | ipaddress.IPv6Interface,
     dryrun: bool = False,
 ):
+    model = "AP-325"
     with serial.Serial(port=name, baudrate=9600, timeout=30) as ser:
         logging.info(f"Starting to connect to serial port {ser.name} with 9600 baud")
         event_keep_serial_active.set()
-        apboot_file = "u-boot.ari"
+        apboot_file = "u-boot.mbn"
 
         bootup_interrupt(ser)
-        model = bootup_set_boot_openwrt(ser, dryrun)
         boot_apboot_via_tftp(ser, tftp_ip, apboot_file, new_ap_ip, model)
+    time.sleep(5)
     with serial.Serial(port=name, baudrate=115200, timeout=30) as ser:
         logging.info(f"Starting to connect to serial port {ser.name} with 115200 baud")
         bootup_interrupt(ser)
