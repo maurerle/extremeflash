@@ -192,11 +192,11 @@ def boot_apboot_via_tftp(
             time.sleep(1)
             break
 
-    write_to_serial(ser, b"sf probe 0"+ b"\n")
-    write_to_serial(ser, b"sf erase 220000 100000"+ b"\n")
-    write_to_serial(ser, b"sf write 44000000 220000 100000"+ b"\n")
-    write_to_serial(ser, b"nand device 0"+ b"\n")
-    write_to_serial(ser, b"nand erase.chip"+ b"\n")
+    write_to_serial(ser, b"sf probe 0"+ b"\n", sleep=1)
+    write_to_serial(ser, b"sf erase 220000 100000"+ b"\n", sleep=1)
+    write_to_serial(ser, b"sf write 44000000 220000 100000"+ b"\n", sleep=1)
+    write_to_serial(ser, b"nand device 0"+ b"\n", sleep=1)
+    write_to_serial(ser, b"nand erase.chip"+ b"\n", sleep=1)
     write_to_serial(ser, b"reset"+ b"\n")
     logging.info("Did patch Bootloader.")
 
@@ -263,23 +263,24 @@ def wait_for_ramboot(ser: serial.Serial):
 
         time.sleep(0.01)
 
-
 def start_tftp_boot_via_serial(
     name: str,
     tftp_ip: ipaddress.IPv4Interface | ipaddress.IPv6Interface,
     tftp_file: str,
     new_ap_ip: ipaddress.IPv4Interface | ipaddress.IPv6Interface,
     dryrun: bool = False,
+    initial_baudrate: int = 9600,
 ):
     model = "AP-325"
-    with serial.Serial(port=name, baudrate=9600, timeout=30) as ser:
-        logging.info(f"Starting to connect to serial port {ser.name} with 9600 baud")
+    with serial.Serial(port=name, baudrate=initial_baudrate, timeout=30) as ser:
+        logging.info(f"Starting to connect to serial port {ser.name} with {initial_baudrate} baud")
         event_keep_serial_active.set()
         apboot_file = "u-boot.mbn"
 
         bootup_interrupt(ser)
         boot_apboot_via_tftp(ser, tftp_ip, apboot_file, new_ap_ip, model)
     time.sleep(5)
+    input("Device needs to be power cycled. Press enter to continue")
     with serial.Serial(port=name, baudrate=115200, timeout=30) as ser:
         logging.info(f"Starting to connect to serial port {ser.name} with 115200 baud")
         bootup_interrupt(ser)
@@ -298,6 +299,7 @@ def main(
     local_ip: str,
     ap_ip: str | None = None,
     dryrun: bool = False,
+    initial_baudrate: int = 115200,
 ):
     ap_ip_interface, local_ip_interface = setting_up_ips(local_ip, ap_ip)
 
@@ -311,7 +313,7 @@ def main(
     try:
         serial_thread = Thread(
             target=start_tftp_boot_via_serial,
-            args=[serial_port, local_ip_interface, initramfs_path.name, ap_ip_interface, dryrun],
+            args=[serial_port, local_ip_interface, initramfs_path.name, ap_ip_interface, dryrun, initial_baudrate],
             daemon=True,
         )
         ssh_thread = Thread(target=start_ssh, args=[sysupgrade_path, str(ap_ip_interface.ip), dryrun])
