@@ -1,0 +1,501 @@
+> extremeflash -i /srv/tftp/openwrt-ipq806x-generic-aruba_ap-325-initramfs.ari -j /srv/tftp/gluon-ffac-v2025.0.0-9-aruba-ap-325-sysupgrade.bin --local-ip 192.168.17.2/24 -v
+DEBUG:root:Failed to access /dev/ttyUSB1.
+INFO:root:Starting tftp server on 192.168.17.2:69 from <TemporaryDirectory '/tmp/tmprmtwoc4l'>
+DEBUG:root:Files in $<TemporaryDirectory '/tmp/tmprmtwoc4l'>: ['openwrt-ipq806x-generic-aruba_ap-325-initramfs.ari']
+DEBUG:root:Starting serial thread
+Exception in thread Thread-1 (listen):
+DEBUG:root:Starting ssh thread
+INFO:root:SSH waiting for ready signal.
+DEBUG:root:Waiting for ssh thread
+INFO:root:Starting to connect to serial port /dev/ttyUSB0 with 9600 baud
+INFO:root:waiting for boot to be interrupted
+INFO:root:
+
+
+DEBUG:root:
+DEBUG:root:
+INFO:root:APBoot 1.5
+INFO:root:APBoot 1.5.5.9 (buil
+INFO:root:APBoot 1.5.5.9 (build 58433)
+
+DEBUG:root:APBoot 1.5.5.9 (build 58433)
+INFO:root:Built: 201
+INFO:root:Built: 2017-02-15 at
+INFO:root:Built: 2017-02-15 at 14:48:27
+INFO:root:Built: 2017-02-15 at 14:48:27
+
+Model: 
+DEBUG:root:Built: 2017-02-15 at 14:48:27
+DEBUG:root:
+INFO:root:Model: AP-32x
+DR
+DEBUG:root:Model: AP-32x
+INFO:root:DRAM:  491 
+INFO:root:DRAM:  491 MB
+SF:   
+DEBUG:root:DRAM:  491 MB
+INFO:root:SF:    Detected 
+INFO:root:SF:    Detected MX25U3235F
+INFO:root:SF:    Detected MX25U3235F with page 
+INFO:root:SF:    Detected MX25U3235F with page size 64 kB
+INFO:root:SF:    Detected MX25U3235F with page size 64 kB, total 4 
+INFO:root:SF:    Detected MX25U3235F with page size 64 kB, total 4 MB
+Flash:
+DEBUG:root:SF:    Detected MX25U3235F with page size 64 kB, total 4 MB
+INFO:root:Flash: 4 MB
+NAN
+DEBUG:root:Flash: 4 MB
+INFO:root:NAND:  132 Mi
+INFO:root:NAND:  132 MiB
+INFO:root:NAND:  132 MiB
+
+DEBUG:root:NAND:  132 MiB
+INFO:root:PCIE
+INFO:root:PCIE0: link up
+INFO:root:PCIE0: link up
+INFO:root:PCIE0: link up
+PC
+DEBUG:root:PCIE0: link up
+INFO:root:PCIE1: link 
+INFO:root:PCIE1: link up
+      
+DEBUG:root:PCIE1: link up
+INFO:root:       dev fn ve
+INFO:root:       dev fn venID devID 
+INFO:root:       dev fn venID devID class  rev
+INFO:root:       dev fn venID devID class  rev    MBAR0 
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1  
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2   
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+  
+DEBUG:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+INFO:root:       00  0
+INFO:root:       00  00  168c  0
+INFO:root:       00  00  168c  0040 00002 
+INFO:root:       00  00  168c  0040 00002   00 00000
+INFO:root:       00  00  168c  0040 00002   00 00000004 000000
+INFO:root:       00  00  168c  0040 00002   00 00000004 00000000 0000000
+INFO:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+INFO:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+       
+DEBUG:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+INFO:root:       dev fn ven
+INFO:root:       dev fn venID devID c
+INFO:root:       dev fn venID devID class  rev 
+INFO:root:       dev fn venID devID class  rev    MBAR0  
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1   
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+   
+DEBUG:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+INFO:root:       00  00
+INFO:root:       00  00  168c  00
+INFO:root:       00  00  168c  0040 00002  
+INFO:root:       00  00  168c  0040 00002   00 000000
+INFO:root:       00  00  168c  0040 00002   00 00000004 0000000
+INFO:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000
+INFO:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+INFO:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+Power: 8
+DEBUG:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+INFO:root:Power: 802.3at POE
+INFO:root:Power: 802.3at POE
+In:    se
+DEBUG:root:Power: 802.3at POE
+INFO:root:In:    serial
+Out:
+DEBUG:root:In:    serial
+INFO:root:Out:   serial
+INFO:root:Out:   serial
+Err:   se
+DEBUG:root:Out:   serial
+INFO:root:Err:   serial
+INFO:root:Err:   serial
+
+DEBUG:root:Err:   serial
+INFO:root:Net:  
+INFO:root:Net:   
+INFO:root:Net:   eth0, eth1
+INFO:root:Net:   eth0, eth1
+Radio: qc
+DEBUG:root:Net:   eth0, eth1
+INFO:root:Radio: qca9990#0, q
+INFO:root:Radio: qca9990#0, qca9990#1
+
+DEBUG:root:Radio: qca9990#0, qca9990#1
+INFO:root:Reset: col
+INFO:root:Reset: cold
+INFO:root:Reset: cold
+FIPS:  pa
+DEBUG:root:Reset: cold
+INFO:root:FIPS:  passed 
+
+H
+DEBUG:root:FIPS:  passed
+DEBUG:root:
+INFO:root:Hit <Enter>
+INFO:root:Hit <Enter> to stop 
+INFO:root:Hit <Enter> to stop autoboot: 
+DEBUG:root:Hit <Enter> to stop autoboot:
+INFO:root:Sending interrupt key 
+ to enter Boot prompt.
+INFO:root:boot interrupted
+INFO:root:set ip to: b'192.168.17.254'
+INFO:root:Did setup TFTP Boot.
+DEBUG:root: 0 
+DEBUG:root:apboot>
+DEBUG:root:apboot> setenv autostart n
+DEBUG:root:apboot> setenv ipaddr 192.168.17.254
+DEBUG:root:apboot> setenv netmask 255.255.255.0
+DEBUG:root:apboot> setenv serverip 192.168.17.2
+DEBUG:root:apboot> setenv gatewayip 192.168.17.2
+DEBUG:root:apboot> netget 44000000 u-boot.mbn
+DEBUG:root:eth0: link up, speed 10 Mb/s, full duplex
+DEBUG:root:Using eth0 device
+DEBUG:root:TFTP from server 192.168.17.2; our IP address is 192.168.17.254
+DEBUG:root:Filename 'u-boot.mbn'.
+DEBUG:root:Load address: 0x44000000
+DEBUG:root:Loading: ######
+DEBUG:root:done
+DEBUG:root:Bytes transferred = 338360 (529b8 hex)
+DEBUG:root:apboot> sf probe 0
+DEBUG:root:b'SF:    Detected MX25U3235F with page size 64 kB, total 4 MB\r\n4096 KiB MX25U3235F at 0:0 is now current device\r\napboot>'
+DEBUG:root:sf erase 220000 100000
+DEBUG:root:b''
+DEBUG:root:apboot> sf write 44000000 220000 100000
+DEBUG:root:b''
+DEBUG:root:................................................................................................................................................................................................................................................apboot> nand device 0
+DEBUG:root:b''
+DEBUG:root:Device 0: nand0... is now current device
+DEBUG:root:b'apboot> nand erase.chip'
+DEBUG:root:OK
+DEBUG:root:b''
+INFO:root:Did patch Bootloader.
+INFO:root:Rebooting into patched APBoot
+INFO:root:Starting to connect to serial port /dev/ttyUSB0 with 115200 baud
+INFO:root:waiting for boot to be interrupted
+INFO:root:
+
+
+DEBUG:root:
+DEBUG:root:
+INFO:root:APBoot 1.5.7.2 (build 332af97)
+Built: 2025-10-23 at 13:03:26
+
+Model: AP-32x
+DRAM:  491 MB
+DEBUG:root:APBoot 1.5.7.2 (build 332af97)
+DEBUG:root:Built: 2025-10-23 at 13:03:26
+DEBUG:root:
+DEBUG:root:Model: AP-32x
+INFO:root:DRAM:  491 MB
+SF:    Detected MX25U3235F with page size 64 kB, total 4 MB
+Flash: 4 MB
+NAND:  132 MiB
+DEBUG:root:DRAM:  491 MB
+DEBUG:root:SF:    Detected MX25U3235F with page size 64 kB, total 4 MB
+DEBUG:root:Flash: 4 MB
+INFO:root:NAND:  132 MiB
+
+DEBUG:root:NAND:  132 MiB
+INFO:root:PCIE0: link up
+INFO:root:PCIE0: link up
+
+DEBUG:root:PCIE0: link up
+INFO:root:PCIE1: link up
+       dev
+DEBUG:root:PCIE1: link up
+INFO:root:       dev fn venID devID class  rev    MBAR0   
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+       00  
+DEBUG:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+INFO:root:       00  00  168c  0040 00002   00 00000004 00
+INFO:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+       dev fn venID devID class  r
+DEBUG:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+INFO:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+Power
+DEBUG:root:       dev fn venID devID class  rev    MBAR0    MBAR1    MBAR2    MBAR3
+DEBUG:root:       00  00  168c  0040 00002   00 00000004 00000000 00000000 00000000
+INFO:root:Power: 802.3at POE
+In:    serial
+Out:   serial
+Err:   serial
+DEBUG:root:Power: 802.3at POE
+DEBUG:root:In:    serial
+DEBUG:root:Out:   serial
+INFO:root:Err:   serial
+
+DEBUG:root:Err:   serial
+INFO:root:Net:  
+INFO:root:Net:   
+INFO:root:Net:   eth0
+INFO:root:Net:   eth0, eth1
+Radio: qca9990#0
+DEBUG:root:Net:   eth0, eth1
+INFO:root:Radio: qca9990#0, qca9990#1
+INFO:root:Radio: qca9990#0, qca9990#1
+Reset: warm
+
+Hit <Enter> to stop autoboot:  2
+DEBUG:root:Radio: qca9990#0, qca9990#1
+DEBUG:root:Reset: warm
+DEBUG:root:
+DEBUG:root:Hit <Enter> to stop autoboot:  2
+INFO:root:Sending interrupt key 
+ to enter Boot prompt.
+INFO:root:boot interrupted
+DEBUG:root:b''
+INFO:root:Did setup TFTP Boot for factory boot.
+DEBUG:ro 0:
+DEBUG:root:apboot>
+DEBUG:root:apboot> setenv autostart n
+DEBUG:root:apboot> setenv ipaddr 192.168.17.254
+DEBUG:root:apboot> setenv netmask 255.255.255.0
+DEBUG:root:apboot> setenv serverip 192.168.17.2
+DEBUG:root:apboot> setenv gatewayip 192.168.17.2
+DEBUG:root:apboot> tftpboot openwrt-ipq806x-generic-aruba_ap-325-initramfs.ari
+DEBUG:root:eth0: link up, speed 10 Mb/s, full duplex
+DEBUG:root:Using eth0 device
+DEBUG:root:TFTP from server 192.168.17.2; our IP address is 192.168.17.254
+DEBUG:root:Filename 'openwrt-ipq806x-generic-aruba_ap-325-initramfs.ari'.
+DEBUG:root:Load address: 0x44000000
+DEBUG:root:Loading: #################################################################
+DEBUG:root:      #############################################
+DEBUG:root:done
+DEBUG:root:Bytes transferred = 7158928 (6d3c90 hex)
+INFO:root:Did boot into ramimage.
+DEBUG:root:
+DEBUG:root:Image is not signed; verifying checksum... passed
+DEBUG:root:[    0.000000] Booting Linux on physical CPU 0x0
+INFO:root:Booting Linux kernel in RAM
+DEBUG:root:[    0.000000] Linux version 6.6.110 (ffac@ffac-build) (arm-openwrt-linux-muslgnueabi-gcc (OpenWrt GCC 13.3.0 r27986+989-fc236f3b3c) 13.3.0, GNU ld (GNU Binutils) 2.42) #0 SMP Thu Oct 23 14:19:06 2025
+DEBUG:root:[    0.000000] CPU: ARMv7 Processor [512f04d0] revision 0 (ARMv7), cr=10c5787d
+DEBUG:root:[    0.000000] CPU: div instructions available: patching division code
+DEBUG:root:[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+DEBUG:root:[    0.000000] OF: fdt: Machine model: Aruba AP-325
+DEBUG:root:[    0.000000] OF: fdt: Ignoring memory range 0x41500000 - 0x41600000
+DEBUG:root:[    0.000000] Memory policy: Data cache writealloc
+DEBUG:root:[    0.000000] OF: reserved mem: 0x40000000..0x40ffffff (16384 KiB) nomap non-reusable nss@40000000
+DEBUG:root:[    0.000000] OF: reserved mem: 0x41000000..0x411fffff (2048 KiB) nomap non-reusable smem@41000000
+DEBUG:root:[    0.000000] OF: reserved mem: 0x41200000..0x414fffff (3072 KiB) nomap non-reusable rsvd@41200000
+DEBUG:root:[    0.000000] Zone ranges:
+DEBUG:root:[    0.000000]   Normal   [mem 0x0000000041600000-0x000000005fffffff]
+DEBUG:root:[    0.000000]   HighMem  empty
+DEBUG:root:[    0.000000] Movable zone start for each node
+DEBUG:root:[    0.000000] Early memory node ranges
+DEBUG:root:[    0.000000]   node   0: [mem 0x0000000041600000-0x000000005fffffff]
+DEBUG:root:[    0.000000] Initmem setup node 0 [mem 0x0000000041600000-0x000000005fffffff]
+DEBUG:root:[    0.000000] On node 0, zone Normal: 1536 pages in unavailable ranges
+DEBUG:root:[    0.000000] percpu: Embedded 13 pages/cpu s21332 r8192 d23724 u53248
+DEBUG:root:[    0.000000] Kernel command line:
+DEBUG:root:[    0.000000] Bootloader command line not present
+DEBUG:root:[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+DEBUG:root:[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+DEBUG:root:[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 124337
+DEBUG:root:[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+DEBUG:root:[    0.000000] Memory: 473228K/501760K available (7511K kernel code, 646K rwdata, 2032K rodata, 12288K init, 238K bss, 28532K reserved, 0K cma-reserved, 0K highmem)
+DEBUG:root:[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+DEBUG:root:[    0.000000] rcu: Hierarchical RCU implementation.
+DEBUG:root:[    0.000000]       Tracing variant of Tasks RCU enabled.
+DEBUG:root:[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+DEBUG:root:[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+DEBUG:root:[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+DEBUG:root:[    0.000000] clocksource: dg_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 305801671480 ns
+DEBUG:root:[    0.000001] sched_clock: 32 bits at 6MHz, resolution 160ns, wraps every 343597383600ns
+DEBUG:root:[    0.000017] Switching to timer-based delay loop, resolution 160ns
+DEBUG:root:[    0.000277] Calibrating delay loop (skipped), value calculated using timer frequency.. 12.50 BogoMIPS (lpj=62500)
+DEBUG:root:[    0.000299] CPU: Testing write buffer coherency: ok
+DEBUG:root:[    0.000349] pid_max: default: 32768 minimum: 301
+DEBUG:root:[    0.009410] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+DEBUG:root:[    0.009430] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+DEBUG:root:[    0.017730] qcom_scm: convention: smc legacy
+DEBUG:root:[    0.019259] RCU Tasks Trace: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=2.
+DEBUG:root:[    0.019487] Setting up static identity map for 0x41900000 - 0x41900060
+DEBUG:root:[    0.019702] rcu: Hierarchical SRCU implementation.
+DEBUG:root:[    0.019711] rcu:  Max phase no-delay instances is 1000.
+DEBUG:root:[    0.020331] smp: Bringing up secondary CPUs ...
+DEBUG:root:[    0.022532] smp: Brought up 1 node, 2 CPUs
+DEBUG:root:[    0.022549] SMP: Total of 2 processors activated (25.00 BogoMIPS).
+DEBUG:root:[    0.022561] CPU: All CPU(s) started in SVC mode.
+DEBUG:root:[    0.035610] VFP support v0.3: implementor 51 architecture 64 part 4d variant 2 rev 0
+DEBUG:root:[    0.035837] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+DEBUG:root:[    0.035866] futex hash table entries: 512 (order: 3, 32768 bytes, linear)
+DEBUG:root:[    0.040579] pinctrl core: initialized pinctrl subsystem
+DEBUG:root:[    0.044515] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DEBUG:root:[    0.044913] DMA: preallocated 256 KiB pool for atomic coherent allocations
+DEBUG:root:[    0.046634] thermal_sys: Registered thermal governor 'step_wise'
+DEBUG:root:[    0.046741] cpuidle: using governor ladder
+DEBUG:root:[    0.046803] cpuidle: using governor menu
+DEBUG:root:[    0.082066] usbcore: registered new interface driver usbfs
+DEBUG:root:[    0.082146] usbcore: registered new interface driver hub
+DEBUG:root:[    0.082212] usbcore: registered new device driver usb
+DEBUG:root:[    0.082277] pps_core: LinuxPPS API ver. 1 registered
+DEBUG:root:[    0.082287] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+DEBUG:root:[    8.891319] ipq806x-gmac-dwmac 37600000.ethernet eth1: Link is Up - 1Gbps/Full - flow control rx/tx
+DEBUG:root:[    8.988969] ipq806x-gmac-dwmac 37600000.ethernet eth1: Link is Down
+DEBUG:root:[    8.996765] procd: - early -
+DEBUG:root:[    8.996911] procd: - watchdog -
+DEBUG:root:[    9.544747] procd: - watchdog -
+DEBUG:root:[    9.545088] procd: - ubus -
+DEBUG:root:[    9.703836] procd: - init -
+DEBUG:root:Please press Enter to activate this console.
+DEBUG:root:[   10.006828] kmodloader: loading kernel modules from /etc/modules.d/*
+DEBUG:root:[   10.016579] Loading modules backported from Linux version v6.12.52-0-g2b2cbdcede38
+DEBUG:root:[   10.016613] Backport generated by backports.git v6.1.110-1-35-g410656ef
+DEBUG:root:[   10.092264] PPP generic driver version 2.4.2
+DEBUG:root:[   10.093622] NET: Registered PF_PPPOX protocol family
+DEBUG:root:[   10.113041] ath10k_pci 0000:01:00.0: enabling device (0140 -> 0142)
+DEBUG:root:[   10.113761] ath10k_pci 0000:01:00.0: pci irq msi oper_irq_mode 2 irq_mode 0 reset_mode 0
+DEBUG:root:[   10.264239] urngd: v1.0.2 started.
+DEBUG:root:[   10.600239] ath10k_pci 0000:01:00.0: qca99x0 hw2.0 target 0x01000000 chip_id 0x003801ff sub 168c:0002
+DEBUG:root:[   10.600290] ath10k_pci 0000:01:00.0: kconfig debug 0 debugfs 1 tracing 0 dfs 1 testmode 0
+DEBUG:root:[   10.610229] ath10k_pci 0000:01:00.0: firmware ver 10.4.1.00030-1 api 5 features no-p2p crc32 d2901e01
+DEBUG:root:[   10.683314] ath10k_pci 0000:01:00.0: board_file api 2 bmi_id 1:1 crc32 4a3d27bf
+DEBUG:root:[   11.923981] ath10k_pci 0000:01:00.0: htt-ver 2.2 wmi-op 6 htt-op 4 cal pre-cal-nvmem max-sta 512 raw 0 hwcrypto 1
+DEBUG:root:[   12.087350] ath10k_pci 0001:01:00.0: enabling device (0140 -> 0142)
+DEBUG:root:[   12.088127] ath10k_pci 0001:01:00.0: pci irq msi oper_irq_mode 2 irq_mode 0 reset_mode 0
+DEBUG:root:[   12.438326] ath10k_pci 0001:01:00.0: qca99x0 hw2.0 target 0x01000000 chip_id 0x003801ff sub 168c:0002
+DEBUG:root:[   12.438382] ath10k_pci 0001:01:00.0: kconfig debug 0 debugfs 1 tracing 0 dfs 1 testmode 0
+DEBUG:root:[   12.448309] ath10k_pci 0001:01:00.0: firmware ver 10.4.1.00030-1 api 5 features no-p2p crc32 d2901e01
+DEBUG:root:[   12.521042] ath10k_pci 0001:01:00.0: board_file api 2 bmi_id 1:2 crc32 4a3d27bf
+DEBUG:root:[   13.754702] ath10k_pci 0001:01:00.0: htt-ver 2.2 wmi-op 6 htt-op 4 cal pre-cal-nvmem max-sta 512 raw 0 hwcrypto 1
+DEBUG:root:[   13.911761] kmodloader: done loading kernel modules from /etc/modules.d/*
+DEBUG:root:[   20.986162] ipq806x-gmac-dwmac 37600000.ethernet eth1: Register MEM_TYPE_PAGE_POOL RxQ-0
+DEBUG:root:[   20.991085] ipq806x-gmac-dwmac 37600000.ethernet eth1: PHY [37000000.mdio-mii:01] driver [Generic PHY] (irq=POLL)
+DEBUG:root:[   20.993345] dwmac1000: Master AXI performs any burst length
+DEBUG:root:[   21.003607] ipq806x-gmac-dwmac 37600000.ethernet eth1: No Safety Features support found
+DEBUG:root:[   21.018993] ipq806x-gmac-dwmac 37600000.ethernet eth1: IEEE 1588-2008 Advanced Timestamp supported
+DEBUG:root:[   21.019185] ipq806x-gmac-dwmac 37600000.ethernet eth1: registered PTP clock
+DEBUG:root:[   21.026965] ipq806x-gmac-dwmac 37600000.ethernet eth1: configuring for phy/sgmii link mode
+DEBUG:root:[   21.034491] br-lan: port 1(eth1) entered blocking state
+DEBUG:root:[   21.042124] br-lan: port 1(eth1) entered disabled state
+DEBUG:root:[   21.047272] ipq806x-gmac-dwmac 37600000.ethernet eth1: entered allmulticast mode
+DEBUG:root:[   21.052568] ipq806x-gmac-dwmac 37600000.ethernet eth1: entered promiscuous mode
+DEBUG:root:[   21.076048] ipq806x-gmac-dwmac 37400000.ethernet eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+DEBUG:root:[   21.080692] ipq806x-gmac-dwmac 37400000.ethernet eth0: PHY [37000000.mdio-mii:00] driver [Generic PHY] (irq=POLL)
+DEBUG:root:[   21.086872] dwmac1000: Master AXI performs any burst length
+DEBUG:root:[   21.093459] ipq806x-gmac-dwmac 37400000.ethernet eth0: No Safety Features support found
+DEBUG:root:[   21.108964] ipq806x-gmac-dwmac 37400000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+DEBUG:root:[   21.109156] ipq806x-gmac-dwmac 37400000.ethernet eth0: registered PTP clock
+DEBUG:root:[   21.118845] ipq806x-gmac-dwmac 37400000.ethernet eth0: configuring for phy/sgmii link mode
+DEBUG:root:[   23.213540] ipq806x-gmac-dwmac 37400000.ethernet eth0: Link is Up - 10Mbps/Full - flow control rx/tx
+DEBUG:root:[   24.172766] ipq806x-gmac-dwmac 37600000.ethernet eth1: Link is Up - 1Gbps/Full - flow control rx/tx
+DEBUG:root:[   24.172857] br-lan: port 1(eth1) entered blocking state
+DEBUG:root:[   24.180709] br-lan: port 1(eth1) entered forwarding state
+INFO:root:br-lan is ready.
+INFO:root:Setting new AP ip to 192.168.17.254/24
+DEBUG:root:uci delete network.wan6.device='eth0'
+DEBUG:root:
+DEBUG:root:
+DEBUG:root:BusyBox v1.36.1 (2025-10-23 14:19:06 UTC) built-in shell (ash)
+DEBUG:root:b''
+DEBUG:root:  _______                     ________        __
+DEBUG:root: |       |.-----.-----.-----.|  |  |  |.----.|  |_
+DEBUG:root: |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+DEBUG:root: |_______||   __|_____|__|__||________||__|  |____|
+DEBUG:root:          |__| W I R E L E S S   F R E E D O M
+INFO:root:SSH Starting
+DEBUG:root: -----------------------------------------------------
+DEBUG:root: OpenWrt 24.10-SNAPSHOT, r27986+989-fc236f3b3c
+DEBUG:root: -----------------------------------------------------
+DEBUG:root:uci delete network.wan.device='eth0'
+DEBUG:root:uci add_list network.@device[0].ports='eth0'
+DEBUG:root:service network restart
+DEBUG:root:=== WARNING! =====================================
+DEBUG:root:There is no root password defined on this device!
+DEBUG:root:Use the "passwd" command to set up a new password
+DEBUG:root:in order to prevent unauthorized SSH logins.
+DEBUG:root:--------------------------------------------------
+DEBUG:root:root@OpenWrt:~# uci delete network.wan.device='eth0'
+DEBUG:root:root@OpenWrt:~# uci add_list network.@device[0].ports='eth0'
+DEBUG:root:root@OpenWrt:~# service network restart
+DEBUG:root:[   26.629400] br-lan: port 1(eth1) entered disabled state
+DEBUG:root:[   26.632587] ipq806x-gmac-dwmac 37600000.ethernet eth1: left allmulticast mode
+DEBUG:root:[   26.633448] ipq806x-gmac-dwmac 37600000.ethernet eth1: left promiscuous mode
+DEBUG:root:[   26.640914] br-lan: port 1(eth1) entered disabled state
+DEBUG:root:[   26.668331] ipq806x-gmac-dwmac 37600000.ethernet eth1: Link is Down
+DEBUG:root:[   27.196634] ipq806x-gmac-dwmac 37400000.ethernet eth0: Link is Down
+INFO:paramiko.transport:Connected (version 2.0, client dropbear)
+DEBUG:root:root@OpenWrt:~# [   29.452529] ipq806x-gmac-dwmac 37600000.ethernet eth1: Register MEM_TYPE_PAGE_POOL RxQ-0
+DEBUG:root:[   29.457480] ipq806x-gmac-dwmac 37600000.ethernet eth1: PHY [37000000.mdio-mii:01] driver [Generic PHY] (irq=POLL)
+INFO:paramiko.transport:Authentication (none) successful!
+DEBUG:root:[   29.459714] dwmac1000: Master AXI performs any burst length
+DEBUG:root:[   29.469994] ipq806x-gmac-dwmac 37600000.ethernet eth1: No Safety Features support found
+DEBUG:root:[   29.485263] ipq806x-gmac-dwmac 37600000.ethernet eth1: IEEE 1588-2008 Advanced Timestamp supported
+DEBUG:root:[   29.485446] ipq806x-gmac-dwmac 37600000.ethernet eth1: registered PTP clock
+DEBUG:root:[   29.493217] ipq806x-gmac-dwmac 37600000.ethernet eth1: configuring for phy/sgmii link mode
+DEBUG:root:[   29.501117] br-lan: port 1(eth1) entered blocking state
+DEBUG:root:[   29.508389] br-lan: port 1(eth1) entered disabled state
+DEBUG:root:[   29.513454] ipq806x-gmac-dwmac 37600000.ethernet eth1: entered allmulticast mode
+DEBUG:root:[   29.518935] ipq806x-gmac-dwmac 37600000.ethernet eth1: entered promiscuous mode
+DEBUG:root:[   29.535799] ipq806x-gmac-dwmac 37400000.ethernet eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+DEBUG:root:[   29.540815] ipq806x-gmac-dwmac 37400000.ethernet eth0: PHY [37000000.mdio-mii:00] driver [Generic PHY] (irq=POLL)
+DEBUG:root:[   29.549806] dwmac1000: Master AXI performs any burst length
+DEBUG:root:[   29.553142] ipq806x-gmac-dwmac 37400000.ethernet eth0: No Safety Features support found
+DEBUG:root:[   29.568629] ipq806x-gmac-dwmac 37400000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+DEBUG:root:[   29.568817] ipq806x-gmac-dwmac 37400000.ethernet eth0: registered PTP clock
+DEBUG:root:[   29.576584] ipq806x-gmac-dwmac 37400000.ethernet eth0: configuring for phy/sgmii link mode
+DEBUG:root:[   29.588632] br-lan: port 2(eth0) entered blocking state
+DEBUG:root:[   29.591678] br-lan: port 2(eth0) entered disabled state
+DEBUG:root:[   29.596918] ipq806x-gmac-dwmac 37400000.ethernet eth0: entered allmulticast mode
+DEBUG:root:[   29.602230] ipq806x-gmac-dwmac 37400000.ethernet eth0: entered promiscuous mode
+DEBUG:root:
+DEBUG:root:root@OpenWrt:~# ip address del 192.168.1.1 dev br-lan
+DEBUG:root:root@OpenWrt:~# ip address add 192.168.17.254/24 dev br-lan
+DEBUG:root:root@OpenWrt:~# ip -4 address show
+DEBUG:root:1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+DEBUG:root:    inet 127.0.0.1/8 scope host lo
+DEBUG:root:       valid_lft forever preferred_lft forever
+DEBUG:root:5: br-lan: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN qlen 1000
+DEBUG:root:    inet 192.168.17.254/24 scope global br-lan
+DEBUG:root:       valid_lft forever preferred_lft forever
+DEBUG:root:root@OpenWrt:~# [   31.693044] ipq806x-gmac-dwmac 37400000.ethernet eth0: Link is Up - 10Mbps/Full - flow control rx/tx
+DEBUG:root:[   31.693133] br-lan: port 2(eth0) entered blocking state
+DEBUG:root:[   31.701332] br-lan: port 2(eth0) entered forwarding state
+DEBUG:root:[   32.650897] ipq806x-gmac-dwmac 37600000.ethernet eth1: Link is Up - 1Gbps/Full - flow control rx/tx
+DEBUG:root:[   32.650979] br-lan: port 1(eth1) entered blocking state
+DEBUG:root:[   32.658846] br-lan: port 1(eth1) entered forwarding state
+DEBUG:root:Running remote: sysupgrade -n /tmp/firmware.bin
+DEBUG:root:sysupgrade stdout: 
+DEBUG:root:sysupgrade stderr: Thu Jan  1 00:00:41 UTC 1970 upgrade: Commencing upgrade. Closing all shell sessions.
+Command failed: ubus call system sysupgrade { "prefix": "\/tmp\/root", "path": "\/tmp\/firmware.bin", "command": "\/lib\/upgrade\/do_stage2", "options": { "save_partitions": 1 } } (Connection failed)
+
+INFO:root:Flashing in progress...
+DEBUG:root:Closing SSH session.
+DEBUG:root:Waiting for serial thread
+DEBUG:root:Watchdog handover: fd=3
+DEBUG:root:- watchdog -
+DEBUG:root:Watchdog does not have CARDRESET support
+DEBUG:root:Thu Jan  1 00:00:42 UTC 1970 upgrade: Sending TERM to remaining processes ...
+DEBUG:root:Thu Jan  1 00:00:46 UTC 1970 upgrade: Sending KILL to remaining processes ...
+DEBUG:root:[   52.917599] stage2 (3283): drop_caches: 3
+DEBUG:root:Thu Jan  1 00:00:52 UTC 1970 upgrade: Switching to ramdisk...
+DEBUG:root:Thu Jan  1 00:00:54 UTC 1970 upgrade: Performing system upgrade...
+DEBUG:root:verifying sysupgrade tar file integrity
+DEBUG:root:[   55.419038] ubi0: attaching mtd0
+DEBUG:root:[   56.470808] ubi0: scanning is finished
+DEBUG:root:[   56.491450] ubi0: attached mtd0 (name "aos0", size 64 MiB)
+DEBUG:root:[   56.491480] ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+DEBUG:root:[   56.495829] ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+DEBUG:root:[   56.502779] ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+DEBUG:root:[   56.509612] ubi0: good PEBs: 512, bad PEBs: 0, corrupted PEBs: 0
+DEBUG:root:[   56.516383] ubi0: user volume: 0, internal volumes: 1, max. volumes count: 128
+DEBUG:root:[   56.522638] ubi0: max/mean erase counter: 1/1, WL threshold: 4096, image sequence number: 0
+DEBUG:root:[   56.529660] ubi0: available PEBs: 488, total reserved PEBs: 24, PEBs reserved for bad PEB handling: 20
+DEBUG:root:[   56.538034] ubi0: background thread "ubi_bgt0d" started, PID 4014
+DEBUG:root:UBI device number 0, total 512 LEBs (65011712 bytes, 62.0 MiB), available 488 LEBs (61964288 bytes, 59.0 MiB), LEB size 126976 bytes (124.0 KiB)
+DEBUG:root:Volume ID 0, size 28 LEBs (3555328 bytes, 3.3 MiB), LEB size 126976 bytes (124.0 KiB), dynamic, name "kernel", alignment 1
+DEBUG:root:[   56.657701] block ubiblock0_1: created from ubi0:1(rootfs)
+DEBUG:root:[   56.657737] ubiblock: device ubiblock0_1 (rootfs) set to be root filesystem
+DEBUG:root:Volume ID 1, size 61 LEBs (7745536 bytes, 7.3 MiB), LEB size 126976 bytes (124.0 KiB), dynamic, name "rootfs", alignment 1
+DEBUG:root:Set volume size to 50663424
+DEBUG:root:Volume ID 2, size 399 LEBs (50663424 bytes, 48.3 MiB), LEB size 126976 bytes (124.0 KiB), dynamic, name "rootfs_data", alignment 1
+DEBUG:root:sysupgrade successful
+DEBUG:root:umount: can't unmount /dev: Resource busy
+DEBUG:root:umount: can't unmount /tmp: Resource busy
+DEBUG:root:[   62.937040] qcom_scm firmware:scm: No available mechanism for setting download mode
+DEBUG:root:[   62.937098] reboot: Restarting system
+INFO:root:Reboot detected. Stopping serial connection.
+INFO:root:All steps finished. Give the AP some time to reboot and then access it on http://192.168.1.1
