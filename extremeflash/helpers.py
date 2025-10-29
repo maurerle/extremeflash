@@ -190,10 +190,10 @@ def boot_set_ips(ser, new_ap_ip):
     ip_str = new_ap_ip.with_prefixlen.encode("ascii")
 
     # add eth0 to lan ports
-    write_to_serial(ser, b"uci delete network.wan6.device='eth0'"+ b"\n")
-    write_to_serial(ser, b"uci delete network.wan.device='eth0'"+ b"\n")
-    write_to_serial(ser, b"uci add_list network.@device[0].ports='eth0'"+ b"\n")
-    write_to_serial(ser, b"service network restart"+ b"\n")
+    write_to_serial(ser, b"uci delete network.wan6.device='eth0'" + b"\n")
+    write_to_serial(ser, b"uci delete network.wan.device='eth0'" + b"\n")
+    write_to_serial(ser, b"uci add_list network.@device[0].ports='eth0'" + b"\n")
+    write_to_serial(ser, b"service network restart" + b"\n")
 
     output = ser.readline()
     debug_serial(output)

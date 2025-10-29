@@ -6,8 +6,8 @@ import logging
 
 import serial
 
-from .ws import SUPPORTED_MODELS
 from .aruba import main
+from .ws import SUPPORTED_MODELS
 
 
 def test_serial_port(potential_serial_port):

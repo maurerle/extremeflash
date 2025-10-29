@@ -18,6 +18,10 @@ pip install extremeflash
 
 ## Usage
 
+For Aruba-AP325 run:
+
+`extremeflash -i /srv/tftp/openwrt-ipq806x-generic-aruba_ap-325-initramfs.ari -j /srv/tftp/gluon-ffac-v2025.0 0-9-aruba-ap-325-sysupgrade.bin --local-ip 192.168.17.2/24 -v`
+
 ### Prerequisites
 
 1. connect a USB serial device to the local machine and to the serial port of the Enterasys AP

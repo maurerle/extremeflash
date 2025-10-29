@@ -176,14 +176,14 @@ def boot_apboot_via_tftp(
     logging.info("set ip to: %s", new_ap_ip_str)
 
     # does not echo in contrast to ws
-    ser.write(b"setenv autostart n"+ b"\n")
+    ser.write(b"setenv autostart n" + b"\n")
     ser.write(b"setenv ipaddr " + new_ap_ip_str + b"\n")
     ser.write(b"setenv netmask " + new_ap_netmask_str + b"\n")
     ser.write(b"setenv serverip " + tftp_ip_str + b"\n")
     ser.write(b"setenv gatewayip " + tftp_ip_str + b"\n")
     logging.info("Did setup TFTP Boot.")
 
-    write_to_serial(ser, b"netget 44000000 "+ tftp_file.encode("ascii")+ b"\n")
+    write_to_serial(ser, b"netget 44000000 " + tftp_file.encode("ascii") + b"\n")
 
     while event_keep_serial_active.is_set():
         line = readline_from_serial(ser)
@@ -192,27 +192,28 @@ def boot_apboot_via_tftp(
             time.sleep(1)
             break
 
-    write_to_serial(ser, b"sf probe 0"+ b"\n", sleep=1)
+    write_to_serial(ser, b"sf probe 0" + b"\n", sleep=1)
     output = ser.read_all()
     debug_serial(output)
-    write_to_serial(ser, b"sf erase 220000 100000"+ b"\n", sleep=1)
+    write_to_serial(ser, b"sf erase 220000 100000" + b"\n", sleep=1)
     output = ser.read_all()
     debug_serial(output)
-    write_to_serial(ser, b"sf write 44000000 220000 100000"+ b"\n", sleep=1)
+    write_to_serial(ser, b"sf write 44000000 220000 100000" + b"\n", sleep=1)
     output = ser.read_all()
     debug_serial(output)
-    write_to_serial(ser, b"nand device 0"+ b"\n", sleep=1)
+    write_to_serial(ser, b"nand device 0" + b"\n", sleep=1)
     output = ser.read_all()
     debug_serial(output)
-    write_to_serial(ser, b"nand erase.chip"+ b"\n", sleep=1)
+    write_to_serial(ser, b"nand erase.chip" + b"\n", sleep=1)
     output = ser.read_all()
     debug_serial(output)
-    write_to_serial(ser, b"reset"+ b"\n")
+    write_to_serial(ser, b"reset" + b"\n")
     output = ser.read_all()
     debug_serial(output)
     logging.info("Did patch Bootloader.")
 
     logging.info("Rebooting into patched APBoot")
+
 
 def boot_factory_via_tftp(
     ser: serial.Serial,
@@ -229,13 +230,13 @@ def boot_factory_via_tftp(
     output = ser.read_all()
     debug_serial(output)
 
-    ser.write(b"setenv autostart n"+ b"\n")
+    ser.write(b"setenv autostart n" + b"\n")
     ser.write(b"setenv ipaddr " + new_ap_ip_str + b"\n")
     ser.write(b"setenv netmask " + new_ap_netmask_str + b"\n")
     ser.write(b"setenv serverip " + tftp_ip_str + b"\n")
     ser.write(b"setenv gatewayip " + tftp_ip_str + b"\n")
     logging.info("Did setup TFTP Boot for factory boot.")
-    write_to_serial(ser, b"tftpboot "+ tftp_file.encode("ascii")+ b"\n")
+    write_to_serial(ser, b"tftpboot " + tftp_file.encode("ascii") + b"\n")
 
     while event_keep_serial_active.is_set():
         line = readline_from_serial(ser)
@@ -245,6 +246,7 @@ def boot_factory_via_tftp(
             break
 
     logging.info("Did boot into ramimage.")
+
 
 def wait_for_ramboot(ser: serial.Serial):
     max_retries = 2
@@ -278,6 +280,7 @@ def wait_for_ramboot(ser: serial.Serial):
 
         time.sleep(0.01)
 
+
 def start_tftp_boot_via_serial(
     name: str,
     tftp_ip: ipaddress.IPv4Interface | ipaddress.IPv6Interface,
@@ -304,6 +307,7 @@ def start_tftp_boot_via_serial(
         boot_set_ips(ser, new_ap_ip)
         event_ssh_ready.set()
         keep_logging_until_reboot(ser)
+
 
 def main(
     serial_port: str,
