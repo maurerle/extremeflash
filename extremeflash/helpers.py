@@ -62,6 +62,8 @@ def debug_serial(string: str):
 def bootup_interrupt(ser: serial.Serial):
     bootlog_buffer = ""
 
+    logging.info("waiting for boot to be interrupted")
+
     while event_keep_serial_active.is_set():
         time.sleep(0.01)
         if ser.in_waiting == 0:
@@ -73,6 +75,7 @@ def bootup_interrupt(ser: serial.Serial):
             logging.warning(f"Failed to decode serial data: {e}")
             new_data = str(ser.read(ser.in_waiting))
         bootlog_buffer += new_data
+        logging.info(bootlog_buffer)
 
         # Only print full lines to debug output
         while "\n" in bootlog_buffer:
@@ -97,6 +100,7 @@ def bootup_interrupt(ser: serial.Serial):
             ser.write(text)
             # TODO FM: should probably be a little earlier
             break
+    logging.info("boot interrupted")
 
 
 def bootup_login(ser: serial.Serial):
@@ -156,6 +160,10 @@ def is_kernel_booting(line):
         # kernel is booting
         return True
 
+    if "[    0.000000] Booting Linux on physical CPU 0x0" in line:
+        # AP-325 is booting
+        return True
+
     return False
 
 
@@ -181,6 +189,18 @@ def boot_set_ips(ser, new_ap_ip):
     logging.info(f"Setting new AP ip to {new_ap_ip}")
     ip_str = new_ap_ip.with_prefixlen.encode("ascii")
 
+    # add eth0 to lan ports
+    write_to_serial(ser, b"uci delete network.wan6.device='eth0'"+ b"\n")
+    write_to_serial(ser, b"uci delete network.wan.device='eth0'"+ b"\n")
+    write_to_serial(ser, b"uci add_list network.@device[0].ports='eth0'"+ b"\n")
+    write_to_serial(ser, b"service network restart"+ b"\n")
+
+    output = ser.readline()
+    debug_serial(output)
+
+    time.sleep(4)
+
+    # now we can set the br-lan ip
     write_to_serial(ser, b"\n")  # login
     write_to_serial(ser, b"ip address del 192.168.1.1 dev br-lan\n")  # remove default IP to avoid collisions
     write_to_serial(ser, b"ip address add " + ip_str + b" dev br-lan\n")
